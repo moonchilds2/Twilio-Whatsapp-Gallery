@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Pick.le: Pick your pics 🥒</title>
+  </head>
+  <body>
+    <h1>Pick.le: Pick your pics 🥒</h1>
+    <h2 id="callToAction">Submit your photos of kittehs!</h2>
+    <div class="gallery" id="gallery"></div>
+
+    <div class="lightbox" id="lightbox">
+      <button class="close-btn" onclick="closeLightbox()">X</button>
+      <button class="nav-btn prev-btn" onclick="navigateLightbox(-1)">❮</button>
+      <img id="lightbox-img" src="" alt="Lightbox Image" />
+      <p id="lightbox-desc"></p>
+      <button class="nav-btn next-btn" onclick="navigateLightbox(1)">❯</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
