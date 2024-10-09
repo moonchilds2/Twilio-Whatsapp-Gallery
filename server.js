@@ -13,6 +13,9 @@ app.use(express.static(path.join(path.dirname(fileURLToPath(import.meta.url)), '
 app.get('/api/gallery', async (req, res) => {
     try {
         const galleryData = await fetchGalleryData();
+        if (!galleryData.length) {
+            return res.status(404).json({ error: 'Nenhuma imagem encontrada na galeria' });
+        }
         res.json(galleryData);
     } catch (error) {
         console.error('Erro ao buscar dados da galeria:', error);
