@@ -8,21 +8,29 @@ const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = twilio(accountSid, authToken);
 
-console.log(accountSid, authToken);
-
 async function deleteAllMessages() {
-  try {
-    const messages = await client.messages.list();
-    for (const message of messages) {
-      console.warn(`Deleting ${message.sid}`);
-      await message.remove(); // Aguarde a remoção da mensagem
+    try {
+        // Lista todas as mensagens
+        const messages = await client.messages.list();
+        
+        if (messages.length === 0) {
+            console.log("Nenhuma mensagem encontrada para deletar.");
+            return;
+        }
+
+        for (const message of messages) {
+            console.warn(`Deletando a mensagem com SID: ${message.sid}`);
+            await message.remove(); // Aguarda a remoção da mensagem
+        }
+
+        console.log("Todas as mensagens foram deletadas com sucesso.");
+    } catch (error) {
+        console.error('Erro ao deletar mensagens:', error);
     }
-  } catch (error) {
-    console.error('Erro ao deletar mensagens:', error);
-  }
 }
 
-console.log("Starting program");
+// Inicia o programa
+console.log("Iniciando o programa...");
 deleteAllMessages()
-  .then(() => console.log("DONE"))
-  .catch((err) => console.error(err));
+    .then(() => console.log("Operação concluída."))
+    .catch((err) => console.error('Erro ao executar a operação:', err));

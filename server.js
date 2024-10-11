@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 // Middleware para servir arquivos estáticos fazendo com que qualquer arquivo na pasta public seja acessada diretamente pelo nav.
 app.use(express.static(path.join(path.dirname(fileURLToPath(import.meta.url)), 'public'))); 
 
-// Criando rota para retornar dados da galeria
+// Rota para retornar dados da galeria.
 app.get('/api/gallery', async (req, res) => {
     try {
         const galleryData = await fetchGalleryData();

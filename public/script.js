@@ -1,5 +1,4 @@
 let galleryData = [];
-
 const galleryElement = document.getElementById("gallery");
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
@@ -53,5 +52,5 @@ window.openLightbox = openLightbox;
 window.closeLightbox = closeLightbox;
 window.navigateLightbox = navigateLightbox;
 
-
+// Carrega a galeria ao iniciar a aplicação
 loadGallery();
