@@ -2,15 +2,15 @@
 
 ## Descrição
 
-O **Pick.le** é uma aplicação web que permite enviar e visualizar imagens de gatos através do WhatsApp utilizando a API do Twilio. A aplicação busca mensagens com imagens enviadas para um número específico do WhatsApp e exibe essas imagens em uma galeria interativa, permitindo a visualização em um lightbox.
+O **Twillio Whatsapp Gallery** é uma aplicação web que permite enviar e visualizar imagens de gatos através do WhatsApp utilizando a API do Twilio. A aplicação busca mensagens com imagens enviadas para um número específico do WhatsApp e exibe essas imagens em uma galeria interativa, permitindo a visualização em um lightbox.
 
 ## Funcionalidades
 
 - Exibição de imagens enviadas via WhatsApp.
 - Visualização em lightbox com navegação entre imagens.
 - Carregamento dinâmico de dados da galeria.
-- Utilização de cache para melhorar a performance.
 - Código modular e estruturado.
+- Funcionalidade opcional para apagar mensagens já enviadas.
 
 ## Estrutura do Projeto
 
@@ -30,7 +30,7 @@ my-api/
 │
 ├── src/
 │   ├── fetch-messages.js  # Módulo para buscar dados do Twilio
-│   └── messagewpp.js # Módulo para receber mensagem no whatsapp após enviada a imagem
+│   └── delete-messages.js # Módulo para apagar mensagens anteriormente enviadas
 │
 └── server.js # Servidor Express
 
@@ -66,9 +66,10 @@ TWILIO_AUTH_TOKEN=seu_auth_token
 
 ## Como usar
 
-1. Envie mensagens com imagens para o número configurado no WhatsApp.
-2. Acesse a aplicação no seu navegador.
-3. Veja as imagens carregadas na galeria e clique nelas para visualizar em um lightbox.
+1. Crie uma conta no Twilio e faça uma conexão sandbox para ter um número utilizável em que possa mandar as imagens.
+2. Envie mensagens com imagens para o número configurado no WhatsApp.
+3. Acesse a aplicação no seu navegador.
+4. Veja as imagens carregadas na galeria e clique nelas para visualizar em um lightbox.
 
 ## Contribuições 
 

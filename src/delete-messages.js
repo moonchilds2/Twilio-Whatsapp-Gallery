@@ -3,7 +3,6 @@ import twilio from 'twilio';
 
 // Carregar as variáveis de ambiente
 dotenv.config({ path: './config/.env' });
-
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = twilio(accountSid, authToken);
