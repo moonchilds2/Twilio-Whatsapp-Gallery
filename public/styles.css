@@ -1,18 +1,43 @@
 body {
   font-family: "Open Sans", sans-serif;
-  margin: 5%;
+  margin: 0;
+  padding: 0;
+  background-color: #fffcc5; 
+}
+
+header {
+  background-color: #191717; 
+  color: #fffcc5;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#title {
+  color: #191717;
+  text-align: center;
+  margin: 20px 0;
 }
 
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  justify-content: center; 
+  gap: 15px; 
+  padding: 20px; 
 }
 
 .thumbnail {
   width: 200px;
   height: 250px;
+  border-radius: 10px;
   cursor: pointer;
+  transition: transform 0.2s; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.thumbnail:hover {
+  transform: scale(1.05); 
 }
 
 .lightbox {
@@ -29,13 +54,17 @@ body {
 }
 
 .lightbox img {
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 90%; 
+  max-height: 80%; 
+  border-radius: 10px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
 }
 
 .lightbox p {
   color: white;
   margin-top: 10px;
+  text-align: center; 
+  max-width: 80%; 
 }
 
 .close-btn {
@@ -45,8 +74,13 @@ body {
   background: none;
   color: white;
   border: none;
-  font-size: 24px;
+  font-size: 28px; 
   cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-btn:hover {
+  color: #ff6961; 
 }
 
 .nav-btn {
@@ -58,6 +92,11 @@ body {
   border: none;
   font-size: 36px;
   cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-btn:hover {
+  color: #ff6961; 
 }
 
 .prev-btn {
@@ -67,3 +106,31 @@ body {
 .next-btn {
   right: 20px;
 }
+
+footer {
+  text-align: center;
+  padding: 15px 0;
+  background-color: #191717;
+  color: #fffcc5;
+  
+}
+
+#redes-sociais {
+  margin-bottom: 10px;
+}
+
+.social-icon {
+  margin: 0 10px;
+  display: inline-block; /* Para que possamos aplicar padding e margin */
+}
+
+.social-icon img {
+  width: 24px; /* Tamanho dos ícones */
+  height: auto; /* Para manter a proporção */
+  transition: transform 0.3s;
+}
+
+.social-icon:hover img {
+  transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
