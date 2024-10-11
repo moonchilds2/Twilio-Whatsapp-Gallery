@@ -24,6 +24,7 @@ my-api/
 ├── node_modules/         # Dependências do projeto
 │
 ├── public/
+    ├── icons/            # Icones .svg utilizados
 │   ├── index.html        # Página principal da aplicação
 │   ├── script.js         # Lógica da aplicação
 │   └── styles.css        # Estilos da aplicação
