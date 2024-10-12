@@ -2,7 +2,7 @@
 
 ## Descrição
 
-O **Twillio Whatsapp Gallery** é uma aplicação web que permite enviar e visualizar imagens de gatos através do WhatsApp utilizando a API do Twilio. A aplicação busca mensagens com imagens enviadas para um número específico do WhatsApp e exibe essas imagens em uma galeria interativa, permitindo a visualização em um lightbox.
+O **Twillio Whatsapp Gallery** é uma aplicação web que permite enviar e visualizar imagens através do WhatsApp utilizando a API do Twilio. A aplicação busca mensagens com imagens enviadas para um número específico do WhatsApp e exibe essas imagens em uma galeria interativa, permitindo a visualização em um lightbox.
 
 ## Funcionalidades
 
